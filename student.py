@@ -1,5 +1,4 @@
 import tkinter as tk
-from tkinter.constants import *
 
 
 class Member(tk.Tk):
@@ -41,8 +40,21 @@ class Member(tk.Tk):
         self.home_address_text = tk.Entry(self.user_enter_frame, textvariable=self.home_address_text)
         self.home_address_text.grid(row=4, column=1)
 
-        self.add_member_button = tk.Button(self.user_enter_frame, text='Add Member')
+        self.add_member_button = tk.Button(self.user_enter_frame, text='Add Member', command=self.add_member)
         self.add_member_button.grid(row=5, column=0)
+
+    def add_member(self):
+        pass
+
+    def display_member(self):
+        pass
+
+
+
+
+
+
+
 
 
 
