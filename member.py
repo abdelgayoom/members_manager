@@ -7,14 +7,10 @@ db = Db('members.db')
 
 
 class Member(tk.Tk):
-    def __init__(self, member=None):
+    def __init__(self):
         super().__init__()
         self.title('Student Manager')
         self.geometry('600x600')
-        if not member:
-            self.member = []
-        else:
-            self.member = member
 
         # member display section
         self.member_display_frame = tk.Frame(self)
