@@ -8,7 +8,7 @@ git clone https://github.com/abdelgayoom/members_manager.git
 ~~~~
 
 ### requirements
-tkinter python stander library
+tkinter and  sqlite3 they usually come pre install with python3 standard library 
 
 ### run
 ~~~~
