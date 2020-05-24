@@ -10,7 +10,7 @@ class Member(tk.Tk):
     def __init__(self):
         super().__init__()
         self.title('Student Manager')
-        self.geometry('600x600')
+        self.geometry('700x600')
 
         # member display section design
         self.member_display_frame = tk.Frame(self)
