@@ -12,13 +12,13 @@ class Member(tk.Tk):
         self.title('Student Manager')
         self.geometry('600x600')
 
-        # member display section
+        # member display section design
         self.member_display_frame = tk.Frame(self)
         self.member_display_frame.grid(row=1, column=0, ipadx=20, ipady=20)
         self.member_info = tk.Listbox(self.member_display_frame, height=40, width=40)
         self.member_info.grid(row=0, column=0, rowspan=3, columnspan=3)
 
-        # registering member section
+        # registering member section design
         self.user_enter_frame = tk.Frame(self)
         self.user_enter_frame.grid(row=0, column=0)
 
@@ -55,7 +55,7 @@ class Member(tk.Tk):
         self.add_member_button = tk.Button(self.user_enter_frame, text='Add Member', command=self.add_member)
         self.add_member_button.grid(row=5, column=0)
 
-        # getting member info section
+        # getting member info section design
         self.user_getting_frame = tk.Frame(self)
         self.user_getting_frame.grid(row=0, column=1)
 
@@ -75,6 +75,7 @@ class Member(tk.Tk):
         self.get_member_button.grid(row=2, column=0)
 
     def add_member(self):
+        """ insert member in the database """
         if self.first_name_text.get() == '' or self.last_name_text.get() == '' or self.email_text.get() == '' or self.phone_text.get() == '' or self.home_address_text.get() == '':
             messagebox.showerror('Empty Field', 'all fields required')
             return False
@@ -83,6 +84,7 @@ class Member(tk.Tk):
         self.clear_add_member_inputs()
 
     def get_member(self):
+        """ retrieve member from database """
         if self.first_name_g_text.get() == '' or self.email_g_text.get() == '':
             messagebox.showerror('Empty Field', 'all fields required')
             self.clear_member_search_inputs()
@@ -95,10 +97,12 @@ class Member(tk.Tk):
                     self.clear_member_search_inputs()
 
     def clear_member_search_inputs(self):
+        """ clear member retrieve inputs """
         self.first_name_g_text.delete(0, END)
         self.email_g_text.delete(0, END)
 
     def clear_add_member_inputs(self):
+        """ clear member add inputs """
         self.first_name_text.delete(0, END)
         self.last_name_text.delete(0, END)
         self.email_text.delete(0, END)
